@@ -1,10 +1,3 @@
-//
-//  MS_Methods.swift
-//  MS_IOS_SDK
-//
-//  Created by Arup Chakraborty on 30/04/19.
-//  Copyright © 2019 Mirrorsize. All rights reserved.
-//
 
 import Foundation
 import UIKit
@@ -84,7 +77,7 @@ public class MS_Methods: NSObject
                 "frontImage" : frontimage  as AnyObject,
                 "sideImage"  : sideimage   as AnyObject,
                 "merchantid" : merchantId  as AnyObject,
-                "mobileModel": modelName   as AnyObject,
+                "mobilemodel": modelName   as AnyObject,
                 "fitType"    : "loosefit"  as AnyObject
         ]
         let callURL = URL.init(string:"https://mobile.msways.com/api/ms_measurement_process")

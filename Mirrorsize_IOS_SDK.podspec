@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "Mirrorsize_IOS_SDK"
 
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
 
   spec.summary      = "Mirrorsize_IOS_SDK library for iOS written in pure Swift."
 
@@ -20,7 +20,9 @@ Pod::Spec.new do |spec|
  
   spec.platform     = :ios, "10.0"
 
-  spec.source       = { :git => "https://github.com/Mirrorsize/Mirrorsize_IOS_SDK.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Mirrorsize/
+
+  Mirrorsize_IOS_SDK.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "Mirrorsize_IOS_SDK/**/*.{swift}"
 
