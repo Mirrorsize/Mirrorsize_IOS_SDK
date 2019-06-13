@@ -63,22 +63,22 @@ public class MS_Methods: NSObject
     {
         let urlSession = URLSession(configuration: URLSessionConfiguration.default)
         let parameters: [String: AnyObject] =
-            [
-                "userId"     : Userid as AnyObject,
-                "angle"      : angle  as AnyObject,
-                "height"     : Height as AnyObject,
-                "weight"     : Weight as AnyObject,
-                "age"        : Age    as AnyObject,
-                "gender"     : gender as AnyObject,
-                "productname": productname as AnyObject,
-                "userName"   : username    as AnyObject,
-                "userMobile" : usermobile  as AnyObject,
-                "apikey"     : apikey      as AnyObject,
-                "frontImage" : frontimage  as AnyObject,
-                "sideImage"  : sideimage   as AnyObject,
-                "merchantid" : merchantId  as AnyObject,
-                "mobilemodel": modelName   as AnyObject,
-                "fitType"    : "loosefit"  as AnyObject
+        [
+            "userId"     : Userid as AnyObject,
+            "angle"      : angle  as AnyObject,
+            "height"     : Height as AnyObject,
+            "weight"     : Weight as AnyObject,
+            "age"        : Age    as AnyObject,
+            "gender"     : gender as AnyObject,
+            "productname": productname as AnyObject,
+            "userName"   : username    as AnyObject,
+            "userMobile" : usermobile  as AnyObject,
+            "apikey"     : apikey      as AnyObject,
+            "frontImage" : frontimage  as AnyObject,
+            "sideImage"  : sideimage   as AnyObject,
+            "merchantid" : merchantId  as AnyObject,
+            "mobilemodel": modelName   as AnyObject,
+            "fitType"    : "loosefit"  as AnyObject
         ]
         let callURL = URL.init(string:"https://mobile.msways.com/api/ms_measurement_process")
         var request = URLRequest.init(url: callURL!)
@@ -97,22 +97,22 @@ public class MS_Methods: NSObject
     {
         let urlSession = URLSession(configuration: URLSessionConfiguration.default)
         let parameters: [String: AnyObject] =
-            [
-                "userId"     : Userid as AnyObject,
-                "angle"      : angle  as AnyObject,
-                "height"     : Height as AnyObject,
-                "weight"     : "75"   as AnyObject,
-                "age"        : "25"   as AnyObject,
-                "gender"     : gender as AnyObject,
-                "productname": productname as AnyObject,
-                "userName"   : username    as AnyObject,
-                "userMobile" : usermobile  as AnyObject,
-                "apikey"     : apikey      as AnyObject,
-                "frontImage" : frontimage  as AnyObject,
-                "sideImage"  : sideimage   as AnyObject,
-                "merchantid" : merchantId  as AnyObject,
-                "mobilemodel": modelName   as AnyObject,
-                "fitType"    : "tightfit"  as AnyObject
+        [
+            "userId"     : Userid as AnyObject,
+            "angle"      : angle  as AnyObject,
+            "height"     : Height as AnyObject,
+            "weight"     : "75"   as AnyObject,
+            "age"        : "25"   as AnyObject,
+            "gender"     : gender as AnyObject,
+            "productname": productname as AnyObject,
+            "userName"   : username    as AnyObject,
+            "userMobile" : usermobile  as AnyObject,
+            "apikey"     : apikey      as AnyObject,
+            "frontImage" : frontimage  as AnyObject,
+            "sideImage"  : sideimage   as AnyObject,
+            "merchantid" : merchantId  as AnyObject,
+            "mobilemodel": modelName   as AnyObject,
+            "fitType"    : "tightfit"  as AnyObject
         ]
         print(parameters)
         let callURL = URL.init(string:"https://mobile.msways.com/api/ms_measurement_process")
