@@ -44,7 +44,7 @@ public class MS_Methods: NSObject
             "productname": productname as AnyObject,
             "gender"     : gender as AnyObject
         ]
-        let callURL = URL.init(string:"https://api.mysize.mirrorsize.comsssssss/api/ms_initialize_user")
+        let callURL = URL.init(string:"https://api.mysize.mirrorsize.com/api/ms_initialize_user")
         var request = URLRequest.init(url: callURL!)
         request.timeoutInterval = 600
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData

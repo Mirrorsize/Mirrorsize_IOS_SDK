@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "Mirrorsize_IOS_SDK"
 
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
 
   spec.summary      = "Mirrorsize_IOS_SDK library for iOS written in pure Swift."
 
