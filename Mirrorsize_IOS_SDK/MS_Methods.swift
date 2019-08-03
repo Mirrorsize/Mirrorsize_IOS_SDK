@@ -34,18 +34,17 @@ public class MS_Methods: NSObject
     {
         motionManager.stopAccelerometerUpdates()
     }
-    public static func MS_initialize_user(apikey: String, merchantId: String, productname: String, producttype: String, gender: String, completion: @escaping(Data?,URLResponse?,Error?)->())
+    public static func MS_initialize_user(apikey: String, merchantId: String, productname: String, gender: String, completion: @escaping(Data?,URLResponse?,Error?)->())
     {
         let urlSession = URLSession(configuration: URLSessionConfiguration.default)
         let parameters: [String: AnyObject] =
-            [
-                "apiKey"     : apikey      as AnyObject,
-                "merchantid" : merchantId  as AnyObject,
-                "productname": productname as AnyObject,
-                "productType": producttype as AnyObject,
-                "gender"     : gender as AnyObject
-            ]
-        let callURL = URL.init(string:"https://mobile.msways.com/api/ms_initialize_user")
+        [
+            "apiKey"     : apikey      as AnyObject,
+            "merchantid" : merchantId  as AnyObject,
+            "productname": productname as AnyObject,
+            "gender"     : gender as AnyObject
+        ]
+        let callURL = URL.init(string:"https://api.mysize.mirrorsize.comsssssss/api/ms_initialize_user")
         var request = URLRequest.init(url: callURL!)
         request.timeoutInterval = 600
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
@@ -57,9 +56,8 @@ public class MS_Methods: NSObject
             return completion(data,response,error)
         }
         dataTask.resume()
-        
     }
-    public static func MS_Measurement_Process_loosefit(Userid: String, angle: Int, Height: Int, Weight: Int, Age: Int, gender:String,productname: String, username: String, usermobile: String,apikey: String, frontimage: String,sideimage:String, merchantId: String, modelName:String, completion:@escaping (Data?,Error?,URLResponse?)->())
+    public static func MS_Measurement_Process_loosefit( Userid: String, angle: Int, Height: Int, Weight: Int, Age: Int, gender:String,productname: String, username: String, usermobile: String, apikey: String, frontimage: String, sideimage:String, merchantId: String, modelName:String, completion:@escaping (Data?,Error?,URLResponse?)->() )
     {
         let urlSession = URLSession(configuration: URLSessionConfiguration.default)
         let parameters: [String: AnyObject] =
@@ -73,14 +71,14 @@ public class MS_Methods: NSObject
             "productname": productname as AnyObject,
             "userName"   : username    as AnyObject,
             "userMobile" : usermobile  as AnyObject,
-            "apikey"     : apikey      as AnyObject,
+            "apiKey"     : apikey      as AnyObject,
             "frontImage" : frontimage  as AnyObject,
             "sideImage"  : sideimage   as AnyObject,
             "merchantid" : merchantId  as AnyObject,
             "mobilemodel": modelName   as AnyObject,
             "fitType"    : "loosefit"  as AnyObject
         ]
-        let callURL = URL.init(string:"https://mobile.msways.com/api/ms_measurement_process")
+        let callURL = URL.init(string:"https://api.mysize.mirrorsize.com/api/ms_measurement_process")
         var request = URLRequest.init(url: callURL!)
         request.timeoutInterval = 600
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
@@ -93,7 +91,7 @@ public class MS_Methods: NSObject
         }
         dataTask.resume()
     }
-    public static func MS_Measurement_Process_tightfit(Userid: String, angle: Int, Height: Int, gender:String,productname: String, username: String, usermobile: String,apikey: String, frontimage: String,sideimage:String, merchantId: String, modelName:String, completion:@escaping (Data?,Error?,URLResponse?)->())
+    public static func MS_Measurement_Process_tightfit(Userid: String, angle: Int, Height: Int,Weight: Int, gender:String,productname: String, username: String, usermobile: String,apikey: String, frontimage: String,sideimage:String, merchantId: String, modelName:String, completion:@escaping (Data?,Error?,URLResponse?)->())
     {
         let urlSession = URLSession(configuration: URLSessionConfiguration.default)
         let parameters: [String: AnyObject] =
@@ -101,22 +99,20 @@ public class MS_Methods: NSObject
             "userId"     : Userid as AnyObject,
             "angle"      : angle  as AnyObject,
             "height"     : Height as AnyObject,
-            "weight"     : "75"   as AnyObject,
+            "weight"     : Weight   as AnyObject,
             "age"        : "25"   as AnyObject,
             "gender"     : gender as AnyObject,
             "productname": productname as AnyObject,
             "userName"   : username    as AnyObject,
             "userMobile" : usermobile  as AnyObject,
-            "apikey"     : apikey      as AnyObject,
+            "apiKey"     : apikey      as AnyObject,
             "frontImage" : frontimage  as AnyObject,
             "sideImage"  : sideimage   as AnyObject,
             "merchantid" : merchantId  as AnyObject,
             "mobilemodel": modelName   as AnyObject,
             "fitType"    : "tightfit"  as AnyObject
         ]
-        print(parameters)
-        let callURL = URL.init(string:"https://mobile.msways.com/api/ms_measurement_process")
-        print(callURL!)
+        let callURL = URL.init(string:"https://api.mysize.mirrorsize.com/api/ms_measurement_process")
         var request = URLRequest.init(url: callURL!)
         request.timeoutInterval = 600
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
@@ -130,24 +126,23 @@ public class MS_Methods: NSObject
         dataTask.resume()
     }
     
-    public static func MS_GetMesurement(apikey: String, Apparelname: String, Brandname: String, Gender: String, merchantId: String, productType:String, userId:String, completion: @escaping(Data?,Error?,URLResponse?)->())
+    public static func MS_GetMesurement(apikey: String, Apparelname: String, Brandname: String, Gender: String, merchantId: String, userId:String, completion: @escaping(Data?,Error?,URLResponse?)->())
     {
         let urlsession = URLSession(configuration: URLSessionConfiguration.default)
         let parameter: [String: AnyObject]  =
-            [
-                "apikey"     : apikey as AnyObject,
-                "apparelName": Apparelname as AnyObject,
-                "brandName"  : Brandname as AnyObject,
-                "gender"     : Gender as AnyObject,
-                "merchantID" : merchantId as AnyObject,
-                "productname": "GET_MEASURED" as AnyObject,
-                "productType": productType as AnyObject,
-                "userID"     : userId as AnyObject
+        [
+            "apiKey"     : apikey         as AnyObject,
+            "apparelName": Apparelname    as AnyObject,
+            "brandName"  : Brandname      as AnyObject,
+            "gender"     : Gender         as AnyObject,
+            "merchantid" : merchantId     as AnyObject,
+            "productname": "GET_MEASURED" as AnyObject,
+            "userId"     : userId         as AnyObject
         ]
-        let callurl = URL.init(string:"https://mobile.msways.com/api/ms_getRecommendation")
+        let callurl = URL.init(string:"https://api.mysize.mirrorsize.com/api/ms_getRecommendation")
         var request = URLRequest.init(url: callurl!)
         request.httpMethod = "POST"
-        request.timeoutInterval = 60
+        request.timeoutInterval = 180
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameter, options: []) else{return}
@@ -158,24 +153,23 @@ public class MS_Methods: NSObject
         datatask.resume()
     }
     
-    public static func MS_Get_Size_Recommendation(apikey: String, Apparelname: String, Brandname: String, Gender: String, merchantId: String, productType:String, userId:String, completion: @escaping(Data?,Error?,URLResponse?)->())
+    public static func MS_Get_Size_Recommendation(apikey: String, Apparelname: String, Brandname: String, Gender: String, merchantId: String, userId:String, completion: @escaping(Data?,Error?,URLResponse?)->())
     {
         let urlsession = URLSession(configuration: URLSessionConfiguration.default)
         let parameter: [String: AnyObject]  =
-            [
-                "apikey"     : apikey as AnyObject,
-                "apparelName": Apparelname as AnyObject,
-                "brandName"  : Brandname as AnyObject,
-                "gender"     : Gender as AnyObject,
-                "merchantID" : merchantId as AnyObject,
-                "productname": "SIZE2FIT" as AnyObject,
-                "productType": productType as AnyObject,
-                "userID"     : userId as AnyObject
+        [
+            "apiKey"     : apikey         as AnyObject,
+            "apparelName": Apparelname    as AnyObject,
+            "brandName"  : Brandname      as AnyObject,
+            "gender"     : Gender         as AnyObject,
+            "merchantid" : merchantId     as AnyObject,
+            "productname": "SIZE2FIT"     as AnyObject,
+            "userId"     : userId         as AnyObject
         ]
-        let callurl = URL.init(string:"https://mobile.msways.com/api/ms_getRecommendation")
+        let callurl = URL.init(string:"https://api.mysize.mirrorsize.com/api/ms_getRecommendation")
         var request = URLRequest.init(url: callurl!)
         request.httpMethod = "POST"
-        request.timeoutInterval = 60
+        request.timeoutInterval = 180
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameter, options: []) else{return}
@@ -186,3 +180,4 @@ public class MS_Methods: NSObject
         datatask.resume()
     }
 }
+
